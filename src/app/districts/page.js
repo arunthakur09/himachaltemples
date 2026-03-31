@@ -1,6 +1,10 @@
-import Head from 'next/head';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/image';
+
+export const metadata = {
+  title: 'Districts',
+  description: 'Browse all districts of Himachal Pradesh and discover key temple destinations in each region.',
+};
 
 export default function Districts() {
   const districts = [
@@ -92,18 +96,23 @@ export default function Districts() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Districts of Himachal Pradesh</title>
-      </Head>
       <header className="bg-blue-600 text-white p-4 text-center">
         <h1 className="text-3xl font-bold">Districts of Himachal Pradesh</h1>
       </header>
       <main className="container mx-auto p-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {districts.map((district, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <Link href={`/districts/${district.name}`}>
-                    <Image width={district.width} height={district.height} src={district.image} alt={district.name} className="w-full h-48 object-cover"/>
+            <div key={district.name} className="bg-white rounded-lg shadow-md overflow-hidden transition-shadow hover:shadow-lg">
+                <Link href={`/districts/${district.name}`} className="block">
+                    <Image
+                      width={district.width}
+                      height={district.height}
+                      src={district.image}
+                      alt={district.name}
+                      priority={index < 3}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="w-full h-48 object-cover"
+                    />
                     <div className="p-4">
                         <h2 className="text-xl font-semibold mb-2">{district.name}</h2>
                         <p className="text-gray-700">{district.description}</p>

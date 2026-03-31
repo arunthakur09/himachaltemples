@@ -1,8 +1,10 @@
 import Link from 'next/link';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-blue-600 text-white p-4">
+    <footer className="bg-slate-900 text-white p-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
           <h2 className="text-2xl font-bold">Himachal Pradesh</h2>
@@ -11,7 +13,7 @@ const Footer = () => {
         <div className="flex space-x-6">
           <div>
             <h3 className="font-semibold">Explore</h3>
-            <ul>
+            <ul className="space-y-1">
               <li className="hover:underline"><Link href="/">Home</Link></li>
               <li className="hover:underline"><Link href="/districts">Districts</Link></li>
               <li className="hover:underline"><Link href="/articles">Articles</Link></li>
@@ -19,7 +21,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="font-semibold">About</h3>
-            <ul>
+            <ul className="space-y-1">
               <li className="hover:underline"><Link href="/about">About Us</Link></li>
               <li className="hover:underline"><Link href="/contact">Contact Us</Link></li>
               <li className="hover:underline"><Link href="/privacy">Privacy Policy</Link></li>
@@ -27,16 +29,16 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="font-semibold">Follow Us</h3>
-            <ul>
-              <li className="hover:underline">Facebook</li>
-              <li className="hover:underline">Twitter</li>
-              <li className="hover:underline">Instagram</li>
+            <ul className="space-y-1 text-gray-300">
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
             </ul>
           </div>
         </div>
       </div>
       <div className="text-center mt-4">
-        <p>&copy; 2024 Himachal Pradesh. All rights reserved.</p>
+        <p>&copy; {year} Himachal Pradesh. All rights reserved.</p>
       </div>
     </footer>
   );
