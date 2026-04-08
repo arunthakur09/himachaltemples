@@ -38,7 +38,7 @@ A production-ready Next.js 14 website to explore famous temples across districts
 - `/districts/Kangra`
 - `/districts/Kinnaur`
 - `/districts/Kullu`
-- `/districts/Lahaul-Spiti`
+- `/districts/Lahaul_Spiti`
 - `/districts/Mandi`
 - `/districts/Shimla`
 - `/districts/Sirmaur`

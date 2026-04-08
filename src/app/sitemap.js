@@ -14,7 +14,7 @@ export default function sitemap() {
     '/districts/Kangra',
     '/districts/Kinnaur',
     '/districts/Kullu',
-    '/districts/Lahaul-Spiti',
+    '/districts/Lahaul_Spiti',
     '/districts/Mandi',
     '/districts/Shimla',
     '/districts/Sirmaur',

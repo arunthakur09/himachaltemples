@@ -51,8 +51,8 @@ export default function Districts() {
       height: 400
     },
     {
-      name: 'Lahaul-Spiti',
-      image: '/images/Lahaul-Spiti/Key_monastery.jpg',
+      name: 'Lahaul_Spiti',
+      image: '/images/Lahaul_Spiti/Key_Monastery.jpg',
       description: 'Known for its rugged terrain and Buddhist monasteries, Lahaul and Spiti is a district of stark beauty.',
       width: 600,
       height: 400
